@@ -1,0 +1,69 @@
+.newSurvey {
+    min-height: 50vh;
+    /* background-color: rebeccapurple; */
+}
+
+.nsheaderContainer {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    /* background-color:firebrick; */
+}
+
+.nsheader {
+    font-size: 2.5em;
+}
+
+.surveyTitle {
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: column; */
+}
+
+.title {
+    font-size: 2em;
+    padding: .5em 1em;
+}
+
+.inputBox {
+    width: 10em;
+    height: 3vh;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.addQuestion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px;
+}
+
+.questionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 10em;
+    /* background-color: greenyellow; */
+    padding: 1em 0;
+    border: solid 1px;
+    border-color: rgb(209, 209, 209);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;;
+}
+
+.prompt {
+    font-size: 2em;
+
+}
+
+.doneButton {
+    margin: 1em 0;
+    height: 3em;
+    width: 10em;
+    font-size: 1em;
+    /* border-radius: 1em; */
+    background-color: rgb(40, 40, 75);
+    color: white;
+}
