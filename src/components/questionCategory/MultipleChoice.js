@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import './../../styles/multipleChoice.css';
 import NewSurvey from './../NewSurvey';
 
-
+<script src="https://surveyjs.azureedge.net/0.96.3/survey.react.min.js"></script>
 class MultipleChoice extends Component{
     render() {
         return (
