@@ -13,8 +13,8 @@ class MultipleChoice extends Component{
                    <p> Multiple Choice </p>
                    {/* <Route path="/" component={NewSurvey}/>
                    <Link to="/">
-                    <div>Click Here!</div>
-                    </Link> */}
+                    <div>Back</div>
+                    </Link>  */}
                 </section>
             </div>
         )

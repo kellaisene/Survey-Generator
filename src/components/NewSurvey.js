@@ -8,7 +8,67 @@ import './../styles/newSurvey.css';
 
 
 class NewSurvey extends Component{
+    constructor() {
+        super();
+
+        this.state = {
+            title: "",
+            multipleChoice: true,
+            trueFalse: true,
+            fillInBlank: true,
+            scale: true
+        }
+
+        this.multipleChoiceChange=this.multipleChoiceChange.bind(this);
+        this.trueFalseChange=this.trueFalseChange.bind(this);
+        this.fillInBlankChange=this.fillInBlankChange.bind(this);
+        this.scaleChange=this.scaleChange.bind(this);
+       
+    }
+
+    onTitleChanged(newTitle) {
+        this.setState({
+            title: newTitle
+        })
+    }
+
+    multipleChoiceChange(){
+        this.setState({
+            multipleChoice: false
+        })
+    }
+    trueFalseChange(){
+        this.setState({
+            trueFalse: false
+        })
+    }
+    fillInBlankChange(){
+        this.setState({
+            fillInBlank: false
+        })
+    }
+    scaleChange(){
+        this.setState({
+            scale: false
+        })
+    }
     render() {
+        let mutilpleStyle = {
+            display: this.state.multipleChoice ? 'inline-block' : 'none'
+        }
+
+        let trueFalseStyle = {
+            display: this.state.trueFalse ? 'inline-block' : 'none'
+        }
+
+        let fillInStyle = {
+            display: this.state.fillInBlank ? 'inline-block' : 'none'
+        }
+
+        let scaleStyle = {
+            display: this.state.scale ? 'inline-block' : 'none'
+        }
+        
         return (
             <div className="newSurvey">
             <header className="nsheaderContainer">
@@ -17,7 +77,8 @@ class NewSurvey extends Component{
             
             <section className="surveyTitle">
                 <div className="title">Title</div>
-                <input className="inputBox" placeholder="Type Title Here"></input>
+                <input className="inputBox" placeholder="Type Title Here"
+                onChange={(e) => this.onTitleChanged(e.target.value)}></input>
             </section>
             <section className="questionType">
             
@@ -33,21 +94,21 @@ class NewSurvey extends Component{
                 
                 
                 <div className="prompt">
-                    + Add Question
+                    {/* + Add Question */}
                 </div>
                 
                 <div className="buttonContainer">
                    <Link to="/multipleChoice"> 
-                   <div className="doneButton">Multiple Choice</div>
+                   <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Multiple Choice</div>
                    </Link>
                    <Link to="/trueFalse"> 
-                    <div className="doneButton">Yes/No True/False</div>
+                    <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Yes/No True/False</div>
                     </Link>
                    <Link to="/fillInBlank"> 
-                    <div className="doneButton">Fill in the Blank</div>
+                    <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Fill in the Blank</div>
                     </Link>
                    <Link to="/scale"> 
-                    <div className="doneButton">Scale</div>
+                    <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Scale</div>
                     </Link>
                 </div>
                 
