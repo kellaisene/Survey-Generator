@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {HashRouter, Route, Link, Switch} from 'react-router-dom';
 import MuiltipleChoice from './questionCategory/MultipleChoice';
+import YesNo_TrueFalse from './questionCategory/YesNo_TrueFalse';
+import FillInTheBlank from './questionCategory/FillInTheBlank';
+import Scale from './questionCategory/Scale';
 import './../styles/newSurvey.css';
 
 
@@ -9,7 +12,7 @@ class NewSurvey extends Component{
         return (
             <div className="newSurvey">
             <header className="nsheaderContainer">
-                <div className="nsheader">NEW SURVEY</div>
+                <div className="nsheader">NEW SURVEY</div>  
             </header>
             
             <section className="surveyTitle">
@@ -22,7 +25,12 @@ class NewSurvey extends Component{
             <HashRouter>
             <section className="addQuestion">
                 <div className="questionContainer">
+                {/* <Route path="/" component={NewSurvey}/> */}
                 <Route path="/multipleChoice" component={MuiltipleChoice}/>
+                <Route path="/trueFalse" component={YesNo_TrueFalse}/>
+                <Route path="/fillInBlank" component={FillInTheBlank}/>
+                <Route path="/scale" component={Scale}/>
+                
                 
                 <div className="prompt">
                     + Add Question
@@ -47,9 +55,13 @@ class NewSurvey extends Component{
 
             </section>
             </HashRouter>
+            {/* <HashRouter> */}
             <section className="bottomSection">
+                {/* <Link to="/"> */}
             <div className="doneButton">DONE</div>
+            {/* </Link> */}
             </section>
+            {/* </HashRouter> */}
             
             </div>
         )
