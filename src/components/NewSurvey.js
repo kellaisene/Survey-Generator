@@ -53,7 +53,7 @@ class NewSurvey extends Component{
         })
     }
     render() {
-        let mutilpleStyle = {
+        let multipleStyle = {
             display: this.state.multipleChoice ? 'inline-block' : 'none'
         }
 
@@ -99,16 +99,16 @@ class NewSurvey extends Component{
                 
                 <div className="buttonContainer">
                    <Link to="/multipleChoice"> 
-                   <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Multiple Choice</div>
+                   <div onClick={this.multipleChoiceChange} style={multipleStyle} className="button">Multiple Choice</div>
                    </Link>
                    <Link to="/trueFalse"> 
-                    <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Yes/No True/False</div>
+                    <div onClick={this.multipleChoiceChange} style={multipleStyle} className="button">Yes/No True/False</div>
                     </Link>
                    <Link to="/fillInBlank"> 
-                    <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Fill in the Blank</div>
+                    <div onClick={this.multipleChoiceChange} style={multipleStyle} className="button">Fill in the Blank</div>
                     </Link>
                    <Link to="/scale"> 
-                    <div onClick={this.multipleChoiceChange} style={mutilpleStyle} className="button">Scale</div>
+                    <div onClick={this.multipleChoiceChange} style={multipleStyle} className="button">Scale</div>
                     </Link>
                 </div>
                 
